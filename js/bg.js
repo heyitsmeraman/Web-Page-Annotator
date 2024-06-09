@@ -5,6 +5,7 @@ function getSelectedTab(a) {
     a(b[0]);
   });
 }
+ram
 var doc_html = "",
   readerData = {};
 D.useConfig = function (a) {

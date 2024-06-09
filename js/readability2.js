@@ -1,18 +1,6 @@
 /*eslint-env es6:false*/
 /*
- * Copyright (c) 2010 Arc90 Inc
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
+
  */
 
 /*
@@ -21,10 +9,7 @@
  */
 
 /**
- * Public constructor.
- * @param {Object}       uri     The URI descriptor object.
- * @param {HTMLDocument} doc     The document to parse.
- * @param {Object}       options The options object.
+ 
  */
 function Readability(uri, doc, options) {
     options = options || {};
@@ -168,13 +153,7 @@ Readability.prototype = {
      * Iterate over a NodeList, which doesn't natively fully implement the Array
      * interface.
      *
-     * For convenience, the current object context is applied to the provided
-     * iterate function.
-     *
-     * @param  NodeList nodeList The NodeList.
-     * @param  Function fn       The iterate function.
-     * @param  Boolean  backward Whether to use backward iteration.
-     * @return void
+     * 
      */
     _forEachNode: function(nodeList, fn, backward) {
         Array.prototype.forEach.call(nodeList, fn, this);
@@ -182,24 +161,14 @@ Readability.prototype = {
 
     /**
      * Iterate over a NodeList, return true if any of the provided iterate
-     * function calls returns true, false otherwise.
-     *
-     * For convenience, the current object context is applied to the
-     * provided iterate function.
-     *
-     * @param  NodeList nodeList The NodeList.
-     * @param  Function fn       The iterate function.
-     * @return Boolean
+     * fun
      */
     _someNode: function(nodeList, fn) {
         return Array.prototype.some.call(nodeList, fn, this);
     },
 
     /**
-     * Concat all nodelists passed as arguments.
-     *
-     * @return ...NodeList
-     * @return Array
+     
      */
     _concatNodeLists: function() {
         var slice = Array.prototype.slice;

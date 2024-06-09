@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Options</title>
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
+    <script type="text/javascript" src="js/utils.js"></script>
+    <script type="text/javascript" src="js/utils2.js"></script>
+    <script type="text/javascript" src="js/Form.js"></script>
+    <script type="text/javascript" src="js/parseTags.js"></script>
+</head>
+<body>
+<div class="header">
+    
+</div>
+<div class="main">
+    <div class="title">
+        Extension Options
+    </div>
+    <div class="op-section">
+        <div class="section-title">
+            Bookmarking
+        </div>
+        <label for="check-bmPrivateAsDefault" class="form-checkbox">
+            <input id="check-bmPrivateAsDefault" type="checkbox" data-pref="prefs.bookmark.privateByDefault">
+            Private by default while saving
+            <b></b>
+        </label>
+        <label for="check-bmUnreadAsDefault" class="form-checkbox">
+            <input id="check-bmUnreadAsDefault" type="checkbox" data-pref="prefs.bookmark.unreadByDefault">
+            Read later by default while saving
+            <b></b>
+        </label>
+        <label for="check-autoCloseReadLater" class="form-checkbox">
+            <input id="check-autoCloseReadLater" type="checkbox" data-pref="prefs.autoCloseReadLater">
+            Automatically close a page when saved by clicking “Read Later”
+            <b></b>
+        </label>
+        <label for="check-autoloadBookmarkStatus" class="form-checkbox">
+            <input id="check-autoloadBookmarkStatus" type="checkbox" data-pref="prefs.autoloadBookmarkStatus">
+            Show bookmarking status automatically
+            <b></b>
+        </label>
+
+        <label for="check-autoload" class="sub form-checkbox">
+            <input id="check-autoload" type="checkbox" data-pref="prefs.autoload">
+            Show annotations automatically
+            <b></b>
+        </label>
+    </div>
+
+    <div class="op-section">
+        <div class="section-title">
+            Seamless Annotation
+        </div>
+        <label for="check-autoshowicon" class="form-checkbox">
+            <input id="check-autoshowicon" type="checkbox" data-pref="prefs.autoShowHighlightIcon">
+            Upon text selection, show mini search/highlight popup
+            <b></b>
+        </label>
+        <label for="check-showPdfButton" class="form-checkbox">
+            <input id="check-showPdfButton" type="checkbox" data-pref="prefs.showPdfButton">
+            Show ‘Annotate’ button in pages
+            <b></b>
+        </label>
+    </div>
+
+    <div class="op-section">
+        <div class="section-title">
+            Search
+        </div>
+
+        <label for="check-comboSearch" class="form-checkbox">
+            <input id="check-comboSearch" type="checkbox" data-pref="prefs.comboSearch">
+            Search your library when searching Google
+            <b></b>
+        </label>
+
+    </div>
+
+    <div class="op-section">
+        <div class="section-title">
+            Keyboard Shortcuts
+        </div>
+        <div class="shortcuts">
+            <div class="shortcut clearfix" data-type="Bookmark">
+                <div class="s-title">
+                    <label for="check-shortcut-bookmark" class="form-checkbox">
+                        <input type="checkbox" id="check-shortcut-bookmark" data-pref="prefs.shortcutBookmark">
+                        Save Bookmark
+                        <b></b>
+                    </label>
+                </div>
+
+                <label for="check-shortcut-bookmark-ctrl" class="shortcut-ctrl form-checkbox">
+                    <input type="checkbox" id="check-shortcut-bookmark-ctrl" data-pref="prefs.shortcutBookmarkCtrl">
+                    Ctrl +
+                    <b></b>
+                </label>
+                <label for="check-shortcut-bookmark-alt" class="shortcut-alt form-checkbox">
+                    <input type="checkbox" id="check-shortcut-bookmark-alt" data-pref="prefs.shortcutBookmarkAlt">
+                    Alt +
+                    <b></b>
+                </label>
+
+            </div>
+
+            <div class="shortcut clearfix" data-type="AnnotateArticle">
+                <div class="s-title">
+                    <label for="check-shortcut-a-article" class="form-checkbox">
+                        <input type="checkbox" id="check-shortcut-a-article" data-pref="prefs.shortcutAnnotateArticle">
+                        Annotate Article
+                        <b></b>
+                    </label>
+                </div>
+
+                <label for="check-shortcut-a-article-ctrl" class="shortcut-ctrl form-checkbox">
+                    <input type="checkbox" id="check-shortcut-a-article-ctrl"
+                           data-pref="prefs.shortcutAnnotateArticleCtrl">
+                    Ctrl +
+                    <b></b>
+                </label>
+                <label for="check-shortcut-a-article-alt" class="shortcut-alt form-checkbox">
+                    <input type="checkbox" id="check-shortcut-a-article-alt"
+                           data-pref="prefs.shortcutAnnotateArticleAlt">
+                    Alt +
+                    <b></b>
+                </label>
+
+            </div>
+
+
+
+            <div class="shortcut clearfix" data-type="Annotate">
+                <div class="s-title">
+                    <label for="check-shortcut-annotate" class="form-checkbox">
+                        <input type="checkbox" id="check-shortcut-annotate" data-pref="prefs.shortcutAnnotate">
+                        Enable side menu for annotation
+                        <b></b>
+                    </label>
+                </div>
+
+                <label for="check-shortcut-annotate-ctrl" class="shortcut-ctrl form-checkbox">
+                    <input type="checkbox" id="check-shortcut-annotate-ctrl" data-pref="prefs.shortcutAnnotateCtrl">
+                    Ctrl +
+                    <b></b>
+                </label>
+                <label for="check-shortcut-annotate-alt" class="shortcut-alt form-checkbox">
+                    <input type="checkbox" id="check-shortcut-annotate-alt" data-pref="prefs.shortcutAnnotateAlt">
+                    Alt +
+                    <b></b>
+                </label>
+
+            </div>
+
+
+            <div class="shortcut clearfix" data-type="Readlater">
+                <div class="s-title">
+                    <label for="check-shortcut-readlater" class="form-checkbox">
+                        <input type="checkbox" id="check-shortcut-readlater" data-pref="prefs.shortcutReadlater">
+                        Read Later
+                        <b></b>
+                    </label>
+                </div>
+
+                <label for="check-shortcut-readlater-ctrl" class="shortcut-ctrl form-checkbox"
+                       data-pref="prefs.shortcutReadlaterCtrl">
+                    <input type="checkbox" id="check-shortcut-readlater-ctrl" data-pref="prefs.shortcutReadlaterCtrl">
+                    Ctrl +
+                    <b></b>
+                </label>
+                <label for="check-shortcut-readlater-alt" class="shortcut-alt form-checkbox">
+                    <input type="checkbox" id="check-shortcut-readlater-alt" data-pref="prefs.shortcutReadlaterAlt">
+                    Alt +
+                    <b></b>
+                </label>
+
+
+            </div>
+
+
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/options2.js"></script>
+</body>
+</html>

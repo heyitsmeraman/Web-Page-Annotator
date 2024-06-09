@@ -1,16 +1,4 @@
-/*eslint-env es6:false*/
-/*
 
- */
-
-/*
- * This code is heavily based on Arc90's readability.js (1.7.1) script
- * available at: http://code.google.com/p/arc90labs-readability
- */
-
-/**
- 
- */
 function Readability(uri, doc, options) {
     options = options || {};
 
@@ -20,26 +8,22 @@ function Readability(uri, doc, options) {
     this._articleByline = null;
     this._articleDir = null;
 
-    // Configureable options
     this._debug = !!options.debug;
     this._maxElemsToParse = options.maxElemsToParse || this.DEFAULT_MAX_ELEMS_TO_PARSE;
     this._nbTopCandidates = options.nbTopCandidates || this.DEFAULT_N_TOP_CANDIDATES;
     this._maxPages = options.maxPages || this.DEFAULT_MAX_PAGES;
 
-    // Start with all flags set
+  
     this._flags = this.FLAG_STRIP_UNLIKELYS |
         this.FLAG_WEIGHT_CLASSES |
         this.FLAG_CLEAN_CONDITIONALLY;
 
-    // The list of pages we've parsed in this call of readability,
-    // for autopaging. As a key store for easier searching.
     this._parsedPages = {};
 
-    // A list of the ETag headers of pages we've parsed, in case they happen to match,
-    // we'll know it's a duplicate.
+  
     this._pageETags = {};
 
-    // Make an AJAX request for each page and append it to the document.
+ 
     this._curPageNum = 1;
 
     var logEl;
